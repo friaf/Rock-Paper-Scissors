@@ -1,0 +1,70 @@
+body {
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    background: white;
+    color: black;
+    padding: 1%;
+    margin: 10px;
+}
+
+h1 {
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+
+#score-both {
+height: 70px;
+}
+
+#score-both, p {
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+#user-score, #computer-score {
+    font-size: xx-large;
+
+}
+
+#field-container{
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:30px 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.rock {
+    background: url(../images/rock.png) center no-repeat;
+}
+
+.paper {
+    background: url(../images/paper.png) center no-repeat;
+}
+
+.scissors {
+    background: url(../images/scissors.png) center no-repeat;
+}
+
+.button {
+	margin:0 10px;
+	cursor:pointer;
+	border:none;
+	border-radius:50%;
+	color:#fff;
+	text-transform: uppercase;
+	padding:40px 60px;
+	font-weight: bold;
+	font-size: 16px;
+	box-shadow: 2px 3px 0 #01703c;
+	transition:.2s;
+	outline: none;
+}
+
+.buttons {
+	padding:20px 15px;
+	text-align: center;
+    display: inline-block;
+

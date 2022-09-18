@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="rock paper scissors, fun game, children's game">
+    <meta name="keywords" content="rock paper scissors game, children's game, computer game">
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Google fonts and ......-->
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Karla&display=swap" rel="stylesheet">
@@ -11,28 +13,36 @@
 </head>
 <body>
 
+<!--game area-->
+
 <div id="game">
     <h1>Rock Paper Scissors</h1>
 
+<!--score area-->
     <div id="score-both">
-        <p class="win-score-user">You <span id="user-score">0</span> : <span id="computer-score">0</span> Computer</p>
+        <p>You <span id="user-score">0</span> : <span id="computer-score">0</span> Computer</p>
     </div>
-
+    <div id="message">Make your choice!</div>
+<!--computer area-->
+<div id="field-container">
     <div id="computer-field">
-        <div id="computer-choice" class="choice"><p>Rock</p></div>
-        <div id="computer-choice" class="choice"><p>Paper</p></div>
-        <div id="computer-choice" class="choice"><p>Scissors</p></div>
+        <button id="computer-choice" class="computer-choice button rock" data-choice="r"></button>
+        <button id="computer-choice" class="computer-choice button paper" data-choice="p">p</button>
+        <button id="computer-choice" class="computer-choice button scissors" data-choice="s">s</button>
     </div>
-
+<!--message area-->
+    
+<!--user area-->
     <div id="user-field"> 
-        <button aria-label="rock" data-choice="0" class="choice button" id="user-choice"></button>
-        <button aria-label="paper" data-choice="1" class="choice button" id="user-choice"></button>
-        <button aria-label="scissors" data-choice="2"class="choice button" id="user-choice"></button>
+        <button aria-label="rock" data-choice="r" class="user-choice button rock" ></button>
+        <button aria-label="paper" data-choice="p" class="user-choice button paper" >p</button>
+        <button aria-label="scissors" data-choice="s"class="user-choice button scissors">s</button>
     </div>
-
+</div>
+<!--functions area-->
     <div id="functions">
-        <button id="reset">Reset</button>
-        <button id="rules">Rules</button>
+        <button aria-label="Reset" id="reset">Reset</button>
+        <button aria-label="Rules" id="rules" OnClientClick="openwindow()">Rules</button>
     </div>
 
 </div>
