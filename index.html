@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Google fonts and ......-->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Karla&display=swap" rel="stylesheet">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+<div id="game">
+    <h1>Rock Paper Scissors</h1>
+
+    <div id="score-both">
+        <p class="win-score-user">You <span id="user-score">0</span> : <span id="computer-score">0</span> Computer</p>
+    </div>
+
+    <div id="computer-field">
+        <div id="computer-choice" class="choice"><p>Rock</p></div>
+        <div id="computer-choice" class="choice"><p>Paper</p></div>
+        <div id="computer-choice" class="choice"><p>Scissors</p></div>
+    </div>
+
+    <div id="user-field"> 
+        <button aria-label="rock" data-choice="0" class="choice button" id="user-choice"></button>
+        <button aria-label="paper" data-choice="1" class="choice button" id="user-choice"></button>
+        <button aria-label="scissors" data-choice="2"class="choice button" id="user-choice"></button>
+    </div>
+
+    <div id="functions">
+        <button id="reset">Reset</button>
+        <button id="rules">Rules</button>
+    </div>
+
+</div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
