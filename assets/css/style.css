@@ -20,6 +20,11 @@ height: 70px;
     font-size: larger;
     font-weight: bolder;
     letter-spacing: 3px;
+    display:flex;
+    justify-content:space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+
 }
 
 #user-score, #computer-score {
@@ -29,23 +34,37 @@ height: 70px;
 
 #field-container{
     display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
-	padding:30px 20px;
-    margin-left: 10%;
-    margin-right: 10%;
+	padding:70px 40px;
+    margin-left: 14%;
+    margin-right: 14%;
 }
+
+#user-field::after {
+    content:"";
+    background-color: #000;
+    position: absolute;
+    width: 3px;
+    height: 150px;
+    top: 260px;
+    left: 50%;
+    display: block;
+  }
 
 .rock {
     background: url(../images/rock.png) center no-repeat;
+    background-color: whitesmoke;
 }
 
 .paper {
     background: url(../images/paper.png) center no-repeat;
+    background-color: whitesmoke;
 }
 
 .scissors {
     background: url(../images/scissors.png) center no-repeat;
+    background-color: whitesmoke;
 }
 
 .button {
@@ -55,16 +74,25 @@ height: 70px;
 	border-radius:50%;
 	color:#fff;
 	text-transform: uppercase;
-	padding:40px 60px;
+	padding:50px 50px;
 	font-weight: bold;
 	font-size: 16px;
-	box-shadow: 2px 3px 0 #01703c;
+	/*box-shadow: 2px 3px 0 #01703c;*/
+    outline: /*#d76118*/ solid 5px;
+    border: 1px solid black;
 	transition:.2s;
-	outline: none;
+	
 }
 
-.buttons {
-	padding:20px 15px;
-	text-align: center;
-    display: inline-block;
+.user-choice {
+    outline: #186bd7 solid 3px;
+
+}
+
+.computer-choice {
+    outline: #0eda60 solid 3px;
+}
+
+
+
 
