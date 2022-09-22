@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,47 +12,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Karla&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
 </head>
+
 <body>
 
-<!--game area-->
+    <!--game area-->
 
-<div id="game">
-    <div id="heading">
-    <h1>Rock Paper Scissors</h1>
+    <div id="game">
+        <div id="heading">
+            <h1>Rock, Paper, Scissors</h1>
+        </div>
+        <!--message area-->
+        <div id="message">
+            <p>Please make your choice!</p>
+        </div>
+
+        <!--score area-->
+        <div id="score-both">
+            <!--<p>Comp  <span id="computer-score">0</span> <span id="user-score">0</span>  User</p>-->
+            <p id="score-c">Computer <span id="computer-score">0</span></p>
+            <p><span id="user-score">0</span> Player</p>
+
+
+        </div>
+
+        <div id="field-container">
+            <!--computer area-->
+            <div id="computer-field">
+                <button id="computer-choice" class="computer-choice button rock-c" data-choice="r" disabled></button>
+                <button id="computer-choice" class="computer-choice button paper-c" data-choice="p"></button>
+                <button id="computer-choice" class="computer-choice button scissors-c" data-choice="s"></button>
+            </div>
+
+            <button aria-label="Reset" id="reset"><i class="fa-solid fa-repeat"></i></button>
+
+
+            <!--user area-->
+            <div id="user-field">
+                <button aria-label="rock" data-choice="r" class="user-choice button rock"></button>
+                <button aria-label="paper" data-choice="p" class="user-choice button paper"></button>
+                <button aria-label="scissors" data-choice="s" class="user-choice button scissors"></button>
+            </div>
+        </div>
+
     </div>
-    <!--message area-->
-    <div id="message"><p>Welcome! Please make your choice!</p></div>
-
-<!--score area-->
-    <div id="score-both">
-        <p>Player <span id="user-score">0</span>  <span id="computer-score">0</span> Computer</p>
-        <!--<p>Player <span id="user-score">0</span></p>
-        <p><span id="computer-score">0</span> Computer</p>-->
-
-
-    </div>
-
-<div id="field-container"> 
-<!--user area-->
-    <div id="user-field"> 
-        <button aria-label="rock" data-choice="r" class="user-choice button rock" ></button>
-        <button aria-label="paper" data-choice="p" class="user-choice button paper" ></button>
-        <button aria-label="scissors" data-choice="s"class="user-choice button scissors"></button>
-    </div>
-
-    <button aria-label="Reset" id="reset"><i class="fa-solid fa-repeat"></i></button>
-   
-<!--computer area-->
-    <div id="computer-field">
-        <button id="computer-choice" class="computer-choice button rock" data-choice="r"></button>
-        <button id="computer-choice" class="computer-choice button paper" data-choice="p"></button>
-        <button id="computer-choice" class="computer-choice button scissors" data-choice="s"></button>
-    </div>
-</div>
-
-</div>
-
+    
+    <!--script-->
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/c7716a6d13.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
