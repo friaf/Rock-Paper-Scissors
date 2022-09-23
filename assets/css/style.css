@@ -91,35 +91,35 @@ span {
 
 .rock {
     background: url(../images/rock.png) center no-repeat;
-    background-color: #FFFF00;
+    background-color: rgb(210, 5, 5);
 }
 
 .paper {
     background: url(../images/paper.png) center no-repeat;
-    background-color: #FFFF00;
+    background-color: rgb(210, 5, 5);
 }
 
 .scissors {
     background: url(../images/scissors.png) center no-repeat;
-    background-color: #FFFF00;
+    background-color: rgb(210, 5, 5);
 }
 
 .rock-c {
     background: url(../images/rockk.png) center no-repeat;
-    background-color: #FFFF00;
+    background-color: rgb(210, 5, 5);
 }
 
 .paper-c {
     background: url(../images/paperr.png) center no-repeat;
-    background-color: #FFFF00;
+    background-color: rgb(210, 5, 5);
 }
 
 .scissors-c {
     background: url(../images/scissorss.png) center no-repeat;
-    background-color: #FFFF00;
+    background-color: rgb(210, 5, 5);
 }
 
-.button {
+.field {
     margin:13px 20px 5px;
     cursor:pointer;
     border:none;
@@ -132,14 +132,26 @@ span {
     transition:.2s;   
 }
 
+.field.active {
+    background-color: #FFFF00;
+}
+
+.fields.error {
+    background-color: black;
+}
+
 .fa-solid {
     font-size: x-large;
 }
 
-.user-choice:hover {
-    transform: scale(1.2);
+button:hover,
+button:active {
+    background-color: #FFFF00;
 }
 
+:active{
+    background-color: #FFFF00;
+}
 .computer-choice:hover {
  cursor: default;
 }
