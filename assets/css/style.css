@@ -136,7 +136,7 @@ span {
     background-color: #FFFF00;
 }
 
-.fields.error {
+.field.error {
     background-color: black;
 }
 
@@ -144,17 +144,35 @@ span {
     font-size: x-large;
 }
 
-button:hover,
-button:active {
-    background-color: #FFFF00;
+.user-choice:hover {
+    transform: scale(1.2);
 }
 
-:active{
-    background-color: #FFFF00;
-}
 .computer-choice:hover {
  cursor: default;
 }
+
+.computer-field.blink .rock-c {
+	animation: blink 0.6s linear infinite;
+}
+.computer-field.blink .scissors-c {
+	animation: blink 0.6s 0.3s linear infinite;
+}
+.computer-field.blink .paper-c {
+	animation: blink 0.6s 0.2s linear infinite;
+}
+
+.computer-field.blink {
+    animation-play-state: paused;
+}
+
+@keyframes blink {
+    10%{background-color: #FFFF00;}
+    }
+
+
+
+
 
 
 
