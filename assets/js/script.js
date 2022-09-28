@@ -1,20 +1,21 @@
+
 window.addEventListener('load', function() {
 
 
-    let messages = document.querySelector('.comments');
-    let computerScore = document.querySelector('#computer-score');
-    let userScore = document.querySelector('#user-score');
-    let computerField = document.querySelector('.computer-field');
-    let userField = document.querySelector('#user-field');
-    let resetButton = document.querySelector('#reset');
-    let fields = document.querySelectorAll('.field');
+    let messages = document.querySelector('.comments'),
+        computerScore = document.querySelector('#computer-score'),
+        userScore = document.querySelector('#user-score'),
+        computerField = document.querySelector('.computer-field'),
+        userField = document.querySelector('#user-field'),
+        resetButton = document.querySelector('#reset'),
+        fields = document.querySelectorAll('.field'),
 
 
-    let userStep;
-    let computerStep;
-    let countUser = 0;
-    let countComputer = 0;
-    let blocked = false;
+    userStep,
+    computerStep,
+    countUser = 0,
+    countComputer = 0,
+    blocked = false;
 
 
     const winSound = new Audio('assets/audio/win.wav');
@@ -97,7 +98,7 @@ window.addEventListener('load', function() {
 
     resetButton.addEventListener('click', playGame);
     userField.addEventListener('click', userGame);
-    
+
 
     const toggleModal = () => {
         document.querySelector('.modal')
