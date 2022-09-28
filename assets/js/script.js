@@ -3,13 +3,11 @@ window.addEventListener('load', function() {
 
     let messages = document.querySelector('.comments');
     let computerScore = document.querySelector('#computer-score');
-    let userScrore = document.querySelector('#user-score');
+    let userScore = document.querySelector('#user-score');
     let computerField = document.querySelector('.computer-field');
     let userField = document.querySelector('#user-field');
     let resetButton = document.querySelector('#reset');
-    let sounds = document.querySelector('#sound');
-    let computerChoice = document.querySelector('#computer-choice');
-    let fields = document.querySelectorAll('.field')
+    let fields = document.querySelectorAll('.field');
 
 
     let userStep;
@@ -20,7 +18,7 @@ window.addEventListener('load', function() {
 
 
     const winSound = new Audio('assets/audio/win.wav');
-    const pcSound = new Audio('assets/audio/pc.wav');
+    const loseSound = new Audio('assets/audio/lose.wav');
     const drawSound = new Audio('assets/audio/draw.wav');
 
 
@@ -32,6 +30,7 @@ window.addEventListener('load', function() {
             fields.forEach(item => item.classList.remove('active', 'error'))
             target.classList.add('active');
             computerGame() 
+            togglePopup()
         }
 
 
@@ -60,7 +59,7 @@ window.addEventListener('load', function() {
             case 'ss':
             case 'pp':
                 messages.innerText = 'Its a draw!';
-                winSound.play();
+                drawSound.play();
                 break;   
                 
                 case 'rs':
@@ -69,14 +68,14 @@ window.addEventListener('load', function() {
                     messages.innerText = 'You win!';
                     winSound.play();
                     countUser++;
-                    userScrore.innerText = countUser;
+                    userScore.innerText = countUser;
                     break;  
 
                     case 'sr':
                     case 'ps':
                     case 'rp':
                         messages.innerText = 'Computer wins!';
-                        winSound.play();
+                        loseSound.play();
                         countComputer++;
                         computerScore.innerText = countComputer;
                         break;   
@@ -86,22 +85,39 @@ window.addEventListener('load', function() {
     }
 
     function playGame(){
-
+        countUser = 0;
+        countComputer = 0;
+        messages.innerText = 'Please make your choice!';
+        userScore.innerText = '0';
+        computerScore.innerText = '0';
+        fields.forEach(item => item.classList.remove('active'));
     }
+
 
 
     resetButton.addEventListener('click', playGame);
     userField.addEventListener('click', userGame);
+    
 
+    const toggleModal = () => {
+        document.querySelector('.modal')
+        .classList.toggle('hidden')
+    }
+
+    document.querySelector('#modal-show')
+    .addEventListener('click', toggleModal);
+
+    document.querySelector('#ok-btn')
+    .addEventListener('click', toggleModal);
+
+
+    document.querySelector('.modal-close span')
+    .addEventListener('click', toggleModal);
+
+})
 
 
 
 
     
- 
 
-
-
-
-
-})
