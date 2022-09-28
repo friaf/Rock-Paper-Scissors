@@ -25,6 +25,4 @@
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify"
 }
-"jshintConfig": {
-  "esversion": 6
-}
+
