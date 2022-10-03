@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,15 +46,15 @@
 
             <!--user area-->
             <div id="user-field">
-                <button aria-label="rock" data-field="r" class="user-choice field rock"></button>
-                <button aria-label="paper" data-field="p" class="user-choice field paper"></button>
-                <button aria-label="scissors" data-field="s" class="user-choice field scissors"></button>
+                <button aria-label="rock" data-field="r" class="user-choice field rock move"></button>
+                <button aria-label="paper" data-field="p" class="user-choice field paper move"></button>
+                <button aria-label="scissors" data-field="s" class="user-choice field scissors move"></button>
             </div>
         </div>
 
     </div>
 
-    <!--rules button section-->
+    <!--rules button, modal section -->
     <div class="rules">
     <button id="modal-show">Rules</button>
     </div>
@@ -61,9 +62,9 @@
         <div class="modal-contents">
             <div class="modal-close">
                 <span>X</span>
-            </div>
-            <p>Game Rules</p>
-            <img src="assets/images/rules.png" alt="rules">
+            </div id="text">
+            <h1>Game Rules</h1>
+            <p>Rock blunts Scissors|Paper covers Rock|Scissors cut Paper</p>
             <button id="ok-btn">OK</button>
         </div>
     </div>
