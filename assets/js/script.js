@@ -21,7 +21,10 @@ window.addEventListener('load', function() {
     const winSound = new Audio('assets/audio/win.wav');
     const loseSound = new Audio('assets/audio/lose.wav');
     const drawSound = new Audio('assets/audio/draw.wav');
+
     
+ 
+
 
     function userGame(e){
     if (blocked) return;
@@ -30,7 +33,7 @@ window.addEventListener('load', function() {
         userStep = target.dataset.field;
         fields.forEach(item => item.classList.remove('active'))
         target.classList.add('active');
-        computerGame();
+        computerGame()
     }
     
     
@@ -98,15 +101,31 @@ window.addEventListener('load', function() {
     resetButton.addEventListener('click', playGame);
     userField.addEventListener('click', userGame);
 
-    function arrows(e){
-    let arrowMove = document.getElementsByClassName('.user-choice');
-        for (let i = 0; i <= arrowMove.length; i++)
-        if (e.key === 'ArrowDown') {
-       arrowMove.next().focus();
-   
-         }
-};
+    (function(){
+        var list = document.querySelector('#user-field');
+        var items = list.querySelectorAll('.user-choice');
         
+        var codes = {
+          38: -1,
+          40: 1, 
+        };
+        for (var i = 0; i < items.length; i++) {
+          items[i].index = i;
+        }
+        function handlekeys(ev) {
+          var keycode = ev.keyCode;
+          if (codes[keycode]) {
+            var t = ev.target;
+            if (t.index !== undefined) {
+              if (items[t.index + codes[keycode]]) {
+                items[t.index + codes[keycode]].focus();
+              }
+            }
+          }
+        }
+        list.addEventListener('keyup', handlekeys);
+      })();
+    
     
     const toggleModal = () => {
     document.querySelector('.modal')
@@ -122,9 +141,8 @@ window.addEventListener('load', function() {
     
     document.querySelector('.modal-close span')
     .addEventListener('click', toggleModal);
-    
-    
+
+
     
     });
-    
-    
+  
