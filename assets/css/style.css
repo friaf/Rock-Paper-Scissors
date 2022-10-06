@@ -146,6 +146,10 @@ span {
     transform: scale(1.2);
 }
 
+.user-choice.hover{
+    transform: scale(1.2);
+}
+
 .computer-choice:hover {
  cursor: default;
 }

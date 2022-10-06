@@ -116,16 +116,20 @@ window.addEventListener('load', function() {
           var keycode = ev.keyCode;
           if (codes[keycode]) {
             var t = ev.target;
-            if (t.index !== undefined) {
-              if (items[t.index + codes[keycode]]) {
+            if (t.index !== undefined)
+             {if (items[t.index + codes[keycode]]);
+               {
+                items[t.index + codes[keycode]].classList.add('hover');
                 items[t.index + codes[keycode]].focus();
+              } if (items[t.index - codes[keycode]]);{
+                items[t.index].classList.remove('hover');
               }
             }
-          }
+          } 
         }
         list.addEventListener('keyup', handlekeys);
       })();
-    
+
     
     const toggleModal = () => {
     document.querySelector('.modal')
