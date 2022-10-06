@@ -31,7 +31,7 @@ window.addEventListener('load', function() {
     let target = e.target;
     if(target.classList.contains('field')){
         userStep = target.dataset.field;
-        fields.forEach(item => item.classList.remove('active'))
+        fields.forEach(item => item.classList.remove('active'));
         target.classList.add('active');
         computerGame()
     }
@@ -95,16 +95,14 @@ window.addEventListener('load', function() {
     userScore.innerText = '0';
     computerScore.innerText = '0';
     fields.forEach(item => item.classList.remove('active'));
+    fields.forEach(item => item.classList.remove('hover'));
     }
     
-    document.querySelector('.user-choice').focus();
-    resetButton.addEventListener('click', playGame);
-    userField.addEventListener('click', userGame);
-
+    
     (function(){
-        var list = document.querySelector('#user-field');
-        var items = list.querySelectorAll('.user-choice');
-        
+      var list = document.querySelector('#user-field');
+      var items = list.querySelectorAll('.user-choice');
+  
         var codes = {
           38: -1,
           40: 1, 
@@ -145,6 +143,11 @@ window.addEventListener('load', function() {
     
     document.querySelector('.modal-close span')
     .addEventListener('click', toggleModal);
+
+
+    document.querySelector('.user-choice').focus();
+    resetButton.addEventListener('click', playGame);
+    userField.addEventListener('click', userGame);
 
 
     
