@@ -9,7 +9,6 @@ body {
 }
 /*game section*/
 #game {
-    max-width: 1400px;
     width: 500px;
     height: 500px;
     border: 5px solid #FFFF00;
@@ -242,7 +241,110 @@ img{
     display: none;
 }
 
+/* screens size from 380px wide and down */
+@media screen and (max-width: 380px) {
 
+    #game {
+        width: 300px;
+        height: 500px; 
+        margin: 2%;
+        
+    }
+
+    h1 {
+        letter-spacing: 2px;
+        word-spacing: 3px;
+        font-size:larger;
+    }
+
+    #message p {
+        letter-spacing: 2px;
+        font-size: medium;
+    }
+
+        
+        #score-both, p {
+            font-size: large;
+            font-weight: bolder;
+            letter-spacing: 2px;
+        }
+        
+        
+        #score-c{
+            letter-spacing: 2px;
+        }
+        
+        #user-score, #computer-score {
+            font-size: larger;
+        }
+        
+        #field-container{
+            margin-left: 10%;
+            
+        }
+
+    #modal-show{
+   
+        width: 310px;
+        margin-left: 2%;
+    
+     
+    }
+    
+    }
+
+    /* screens size from 440px wide */
+    @media screen and (max-width: 440px) {
+
+        #game {
+            width: 330px;
+            height: 500px; 
+            margin: 2%;
+            
+        }
+
+        h1 {
+            letter-spacing: 2px;
+            word-spacing: 3px;
+            font-size:larger;
+        }
+    
+        #message p {
+            letter-spacing: 2px;
+            font-size: medium;
+        }
+    
+            
+            #score-both, p {
+                font-size: large;
+                font-weight: bolder;
+                letter-spacing: 2px;
+            }
+            
+            
+            #score-c{
+                letter-spacing: 2px;
+            }
+            
+            #user-score, #computer-score {
+                font-size: larger;
+            }
+            
+            #field-container{
+                margin-left: 13%;
+                
+            }
+    
+        #modal-show{
+       
+            width: 340px;
+            margin-left: 2%;
+        
+         
+        }
+        
+        }
+    
 
 
 
