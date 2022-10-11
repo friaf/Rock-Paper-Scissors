@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
     }
     }
     
-    /*here we do computer steps*/
+    /*here we do computer steps, with timer as if he is thinking and blinking*/
     function computerGame(){
     blocked = true;
     let randomChoice = Math.floor(Math.random() * 3);
@@ -83,7 +83,7 @@ window.addEventListener('load', function() {
     }
     }
     
-    /*reset button*/
+    /*reset button changes everything to the same way as it was on the page load*/
     function playGame(){
     document.querySelector('.user-choice').focus();
     countUser = 0;

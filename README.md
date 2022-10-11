@@ -69,6 +69,9 @@ We all know this game from our childhood, and we loved playing it, this version 
 
 ### Bugs
 
+Game did not look good on my phone after i have checked deployed link for the game, i have added @media screen and (max-width: 380px) and it looked great. 
+
+
 ### Validator Testing
 - HTML 
     - no errors were returned when passing through the oficial W3C validator.
