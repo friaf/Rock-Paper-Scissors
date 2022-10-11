@@ -32,7 +32,7 @@ window.addEventListener('load', function() {
         userStep = target.dataset.field;
         fields.forEach(item => item.classList.remove('active'));
         target.classList.add('active');
-        computerGame()
+        computerGame();
     }
     }
     
